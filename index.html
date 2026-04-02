@@ -155,10 +155,58 @@
                 padding: 6rem;
             }
         }
+
+        /* Estilos para los botones flotantes apilados */
+        .whatsapp-container {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 9999px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(0,0,0,.25);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            text-decoration: none;
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-5px);
+            background: #1eb956;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- BOTONES FLOTANTES WHATSAPP APILADOS -->
+    <div class="whatsapp-container">
+        <!-- Asesor 2 -->
+        <a href="https://wa.me/51904849525?text=Hola%20Golden%20Cacao%20👋%20Quiero%20hacer%20un%20pedido%20."
+            target="_blank" rel="noopener" aria-label="Pedir por WhatsApp" class="whatsapp-btn">
+            <svg style="width: 20px; height: 20px;" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.503-2.961-2.617-.087-.114-.708-.941-.708-1.792 0-.85.445-1.277.604-1.441.159-.164.346-.205.461-.205s.231.005.331.01c.105.005.247-.039.387.297.144.346.491 1.2.535 1.287.043.087.072.187.014.302-.058.114-.087.187-.173.287l-.26.302c-.087.101-.177.21-.076.383.101.173.447.737.959 1.192.658.584 1.213.766 1.386.852.173.087.274.072.375-.043.101-.114.432-.504.547-.677.114-.173.23-.144.387-.087s1.008.475 1.181.561c.173.087.287.13.331.202.044.072.044.475-.1.88zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.168L2 22l4.958-1.303A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.634 0-3.166-.434-4.495-1.192l-.322-.185-2.964.778.792-2.898-.204-.324A7.95 7.95 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+            Pedidos Lima
+        </a>
+        <!-- Asesor 1 -->
+        <a href="https://wa.me/51992059345?text=Hola%20Golden%20Cacao%20👋%20Quiero%20hacer%20un%20pedido%20."
+            target="_blank" rel="noopener" aria-label="Pedir por WhatsApp" class="whatsapp-btn">
+            <svg style="width: 20px; height: 20px;" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.503-2.961-2.617-.087-.114-.708-.941-.708-1.792 0-.85.445-1.277.604-1.441.159-.164.346-.205.461-.205s.231.005.331.01c.105.005.247-.039.387.297.144.346.491 1.2.535 1.287.043.087.072.187.014.302-.058.114-.087.187-.173.287l-.26.302c-.087.101-.177.21-.076.383.101.173.447.737.959 1.192.658.584 1.213.766 1.386.852.173.087.274.072.375-.043.101-.114.432-.504.547-.677.114-.173.23-.144.387-.087s1.008.475 1.181.561c.173.087.287.13.331.202.044.072.044.475-.1.88zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.168L2 22l4.958-1.303A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.634 0-3.166-.434-4.495-1.192l-.322-.185-2.964.778.792-2.898-.204-.324A7.95 7.95 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+            Pedidos Tingo María
+        </a>
+    </div>
 
     <!-- 1. PORTADA -->
     <section id="portada" class="section-page dark-bg text-center">
@@ -203,11 +251,6 @@
                                 Precio por Mayor: 3 x S/. 50
                             </div>
                         </div>
-                        <a class="mt-6 inline-block w-full text-center px-6 py-3 rounded-full bg-[#25D366] text-white font-bold hover:opacity-90 transition"
-                            target="_blank" rel="noopener"
-                            href="https://wa.me/51904849525?text=Hola%20Golden%20Cao%20🍫">
-                            Comprar / Pedir 90gr
-                        </a>
                     </div>
 
                 </div>
@@ -329,11 +372,6 @@
                             Precio por Mayor: 3 x S/. 15
                         </div>
                     </div>
-                    <a class="mt-6 inline-block w-full text-center px-6 py-3 rounded-full bg-[#25D366] text-white font-bold hover:opacity-90 transition"
-                        target="_blank" rel="noopener"
-                        href="https://wa.me/51904849525?text=Hola%20Golden%20Cao%20🍫">
-                        Comprar / Pedir 25gr
-                    </a>
                 </div>
             </div>
 
@@ -447,11 +485,6 @@
                             Precio por Mayor: 3 x S/. 50
                         </div>
                     </div>
-                    <a class="mt-6 inline-block w-full text-center px-6 py-3 rounded-full bg-[#25D366] text-white font-bold hover:opacity-90 transition"
-                        target="_blank" rel="noopener"
-                        href="https://wa.me/51904849525?text=Hola%20Golden%20Cao%20🍫%20Quiero%20pedir%20la%20Tableta%2090g.%20¿Qué%20sabores%20tienen%20disponibles?">
-                        Comprar / Pedir 90gr
-                    </a>
                 </div>
 
             </div>
@@ -526,11 +559,6 @@
                             Precio por Mayor: 3 x S/. 45
                         </div>
                     </div>
-                    <a class="mt-6 inline-block w-full text-center px-6 py-4 rounded-full bg-[#25D366] text-white text-lg font-bold hover:opacity-90 transition"
-                        target="_blank" rel="noopener"
-                        href="https://wa.me/51904849525?text=Hola%20Golden%20Cao%20🍫%20Quiero%20pedir%20la%20Tableta%2080g.%20¿Qué%20sabores%20tienen%20disponibles?">
-                        Comprar / Pedir 80gr
-                    </a>
                 </div>
             </div>
 
@@ -603,11 +631,6 @@
                         <div class="price-tag bg-cacao text-oro text-xl border-2 border-oro text-center">
                             Precio por Mayor: 3 x S/. 39
                         </div>
-                        <a class="mt-6 inline-block w-full text-center px-6 py-4 rounded-full bg-[#25D366] text-white text-lg font-bold hover:opacity-90 transition"
-                            target="_blank" rel="noopener"
-                            href="https://wa.me/51904849525?text=Hola%20Golden%20Cao%20🍫%20Quiero%20pedir%20la%20Tableta%2070g.%20¿Qué%20sabores%20tienen%20disponibles?">
-                            Comprar / Pedir 70gr
-                        </a>
                     </div>
                 </div>
             </div>
@@ -681,11 +704,6 @@
                             Precio Unitario: <span class="text-3xl">S/. 10</span>
                         </div>
                     </div>
-                    <a class="mt-6 inline-block w-full text-center px-6 py-4 rounded-full bg-[#25D366] text-white text-lg font-bold hover:opacity-90 transition"
-                        target="_blank" rel="noopener"
-                        href="https://wa.me/51904849525?text=Hola%20Golden%20Cao%20☕🍫%20Quiero%20pedir%20Chocolate%20para%20Taza%20100%25%20Cacao.%20¿Tienen%20stock?">
-                        Comprar / Pedir Chocolate para Taza
-                    </a>
                 </div>
 
                 <!-- Columna de Receta -->
@@ -772,11 +790,6 @@
                             class="price-tag bg-crema text-cacao text-xl border-2 border-oro text-center opacity-50 grayscale">
                             Precio por Mayor: 3 x S/. 12
                         </div>
-                        <!--<a class="mt-6 inline-block w-full text-center px-6 py-4 rounded-full bg-[#25D366] text-white text-lg font-bold hover:opacity-90 transition"
-                            target="_blank" rel="noopener"
-                            href="https://wa.me/51904849525?text=Hola%20Golden%20Cao%20🍫%20Quiero%20pedir%20la%20Mini%20Barrita%2017g.%20¿Qué%20sabores%20tienen%20disponibles?">
-                            Comprar / Pedir 17gr
-                        </a>-->
                     </div>
                 </div>
             </div>
@@ -887,22 +900,6 @@
             <p class="text-cacao/80">Tel: +51 992 059 345</p>
         </div>
     </section>
-
-    <a href="https://wa.me/51904849525?text=Hola%20Golden%20Cao%20👋%20Quiero%20hacer%20un%20pedido.%20¿Me%20pueden%20ayudar%20con%20disponibilidad%20y%20envíos?"
-        target="_blank" rel="noopener" aria-label="Pedir por WhatsApp" style="position: fixed;
-    right: 18px;
-    bottom: 18px;
-    z-index: 9999;
-    background: #25D366;
-    color: white;
-    padding: 14px 18px;
-    border-radius: 9999px;
-    font-weight: 700;
-    box-shadow: 0 10px 25px rgba(0,0,0,.25);
-    display: flex;
-    gap: 10px;
-    align-items: center;">
-        💬 Pedir por WhatsApp</a>
 
 </body>
 
